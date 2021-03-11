@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<%= turbo_frame_tag 'lesson-question-list' do %>
+  <h1>Questions</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Lesson</th>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody id='question-list'>
+      <% @questions.each do |question| %>
+        <%= render question %>
+      <% end %>
+    </tbody>
+  </table>
+<% end -%>
+
+<br>
+
+<%= link_to 'New Question', new_lesson_question_path(@lesson) %>

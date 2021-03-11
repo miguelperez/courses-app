@@ -1,0 +1,7 @@
+<%# turbo_stream.append('question-list', @question) %>
+
+<%= turbo_stream.replace 'lesson-question-new' do %>
+  <%= turbo_frame_tag 'lesson-question-new' do %>
+    <%= render 'form', question: @lesson.questions.build, lesson: @lesson %>
+  <% end -%>
+<% end -%>

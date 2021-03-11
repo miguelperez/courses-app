@@ -1,0 +1,6 @@
+<h1>Editing Question</h1>
+
+<%= render 'form', question: @question, lesson: @lesson %>
+
+<%= link_to 'Show', [@lesson, @question] %> |
+<%= link_to 'Back', lesson_questions_path(@lesson) %>

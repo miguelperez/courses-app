@@ -1,0 +1,7 @@
+<tr>
+  <td><%= question.lesson_id %></td>
+  <td><%= question.content %></td>
+  <td><%= link_to 'Show', lesson_question_path(question.lesson_id, question) %></td>
+  <td><%= link_to 'Edit', edit_lesson_question_path(question.lesson_id, question) %></td>
+  <td><%= link_to 'Destroy', lesson_question_path(question.lesson_id, question), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

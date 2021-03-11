@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @question.lesson_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @question.content %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_question_path(@lesson, @question) %> |
+<%= link_to 'Back', lesson_questions_path(@lesson) %>

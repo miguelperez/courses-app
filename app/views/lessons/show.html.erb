@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @lesson.course_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @lesson.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @lesson.content %>
+</p>
+
+<%= link_to 'Edit', edit_course_lesson_path(@course, @lesson) %> |
+<%= link_to 'Back', course_lessons_path(@course) %>
+
+<%= turbo_stream_from @lesson %>
+
+<%= turbo_frame_tag 'lesson-question-new', src: new_lesson_question_path(@lesson) %>
+<hr>
+
+
+<%= turbo_frame_tag 'lesson-question-list', src: lesson_questions_path(@lesson) %>
+
+<hr>
